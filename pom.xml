@@ -24,37 +24,40 @@
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-table-api-java-bridge_${scala.binary.version}</artifactId>
       <version>${flink.version}</version>
-      <scope>provided</scope>
     </dependency>
     <!--处理模块，用于将SQL转化为底层flink任务-->
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-table-planner_${scala.binary.version}</artifactId>
       <version>${flink.version}</version>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-streaming-scala_${scala.binary.version}</artifactId>
       <version>${flink.version}</version>
-      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
+      <version>${flink.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-table-common</artifactId>
       <version>${flink.version}</version>
-      <scope>provided</scope>
     </dependency>
-
+    <!--这个依赖用于提供与 Flink 集群交互的客户端功能。
+    这个模块允许用户在客户端代码中与 Flink 集群进行交互，提交作业、查询作业状态、检索作业结果等操作。-->
     <dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-clients_${scala.binary.version}</artifactId>
       <version>${flink.version}</version>
     </dependency>
 
-    <dependency>
+    <!--<dependency>
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-csv</artifactId>
       <version>${flink.version}</version>
@@ -76,9 +79,9 @@
       <groupId>org.apache.flink</groupId>
       <artifactId>flink-connector-jdbc_2.11</artifactId>
       <version>${flink.version}</version>
-    </dependency>
+    </dependency>-->
 
-    <dependency>
+   <!-- <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.28</version>
@@ -89,7 +92,7 @@
       <artifactId>flink-connector-hive_2.11</artifactId>
       <version>${flink.version}</version>
       <scope>provided</scope>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>org.projectlombok</groupId>
@@ -110,11 +113,11 @@
       <version>1.2.73</version>
     </dependency>
 
-    <dependency>
+    <!--<dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>1.7.15</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
